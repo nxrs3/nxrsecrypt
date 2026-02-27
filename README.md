@@ -28,7 +28,7 @@ This is my first big project, and is not a professional, i made this for fun to 
 git clone <your-repo-url>
 ```
 
-2. Create a command to easily run nxrsecrypt
+2. Create a command to easily run nxrsecrypt:
 
 using bash:
 
@@ -51,4 +51,24 @@ function nxrsecrypt
     python3 ~/nxrsecrypt/main.py  
 end  
 funcsave nxrsecrypt
+```
+
+3. installing the 'rich' python module:
+
+using pip:
+
+```
+pip install rich
+```
+
+using pacman:
+
+```
+sudo pacman -S python-rich
+```
+
+using apt:
+
+```
+apt install python3-rich
 ```
