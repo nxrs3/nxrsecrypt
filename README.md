@@ -28,6 +28,7 @@ This is my first big project, and is not a professional, i made this for fun to 
 git clone <your-repo-url>
 ```
 
+
 2. Create a command to easily run nxrsecrypt:
 
 using bash:
@@ -52,6 +53,7 @@ function nxrsecrypt
 end  
 funcsave nxrsecrypt
 ```
+
 
 3. installing the 'rich' python module:
 
