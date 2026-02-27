@@ -1,0 +1,33 @@
+   - nxrsecrypt command overview -
+
+   commands are split by ' // ' so for instance, in the command 'a // x // y // z'
+   'a' is the command, 'x' is argument 1, 'y' is argument 2, 'z' is argument 3
+
+   -basic functionality-
+   exit - exit nxrsecrypt
+   clear - clear the screen (header remains)
+   restart - restart nxrsecrypt
+
+   -encryption-
+   encrypt // <encryption mapping> // <text> - encrypt text
+   decrypt // <encryption mapping> // <text> - decrypt text
+
+   -encryption mapping-
+   list-em - list encryption maps
+   gen-em // <map name> // <chunk length> // <character list> - generate an encryption map (the last argument is optional, as it defaults to 'default')
+   get-em // <encryption mapping name> - display an encryption map
+   del-em // <encryption mapping name> - delete an encryption map
+   
+   list-cl - list encryption mapping character lists
+   create-cl // <list name> // <characters> - create a character list
+   del-cl // <character list name> - delete a character list
+   get-cl // <character list name> - display a character list 
+
+   -dev commands-
+   reset - reset encryption mappings folder, char lists, config, and treats the user as new
+   reset-config - reset config to default config
+   load-config - copy the user config file to the actual config module
+   get-config - display the current config
+
+
+   check the README.md for detailed documentation :)
