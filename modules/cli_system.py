@@ -43,7 +43,7 @@ def display_command_overview(command_overview_path: str):
         commands = f.read()
         print(commands)
 
-def command(prompt: str, splitter: str) -> Tuple[Optional[str], ...]:
+def prompt(prompt: str, splitter: str) -> Tuple[Optional[str], ...]:
     """
     Prompts the user for input, splits it using the given splitter,
     fills up to 8 arguments with None if not provided, and returns as a tuple.

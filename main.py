@@ -266,7 +266,7 @@ def main():
     if welcome_message:
         welcome_user()
     while True:
-        args = cli_system.command(command_prompt, " // ")
+        args = cli_system.prompt(command_prompt, " // ")
         cmd = args[0]
         if cmd in commands:
             commands[cmd](args)
