@@ -22,7 +22,7 @@ config_location = os.path.join(location, "config")
 config_module_location = os.path.join(location, "modules", "config.py")
 
 # program information | editing correctly wont break anything, edit if you want
-version = "alpha"
+version = "beta"
 
 # other information | editing correctly wont break anything, edit if you want
 user = getuser()
