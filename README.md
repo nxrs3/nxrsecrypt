@@ -210,8 +210,3 @@ and
 ```
 restart
 ```
-
-
-**Default config:**
-
-![Screenshot](images/default_config_screenshot.png)
