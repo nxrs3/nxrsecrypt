@@ -129,7 +129,7 @@ del-em // <name of mapping>
 ```
 Generate a map:
 ```
-gen-em // <name> // <chunk length/strength (2-10)> // <character list (anything other than default is not necessary.)>
+gen-em // <name> // <chunk length/strength (3-10)> // <character list (anything other than default is not necessary.)>
 ```
 displaying a map:
 ```
