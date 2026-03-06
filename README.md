@@ -19,7 +19,6 @@ Only tested on linux
 - 🔐 Encrypt text using a mapping file.
 - 🔓 Decrypt text with the corresponding mapping.
 - 🗺️ Support for multiple mapping tables.
-- </> Commands to manage and generate mappings.
 - ⚙️ Editable config file.
 - ⚠️ Error messages for unsupported characters, invalid encrypted input, etc.
 - 💬 CLI feedback with success, error, and info messages.
