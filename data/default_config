@@ -9,7 +9,7 @@ from getpass import getuser
 
 home = os.path.expanduser("~")
 
-# directory & file locations | please don't edit this
+# directory & file locations | only edit this if your nxrsecrypt dir is actually any other place than ~/
 location = os.path.join(home, "nxrsecrypt")
 main_py_location = os.path.join(location, "main.py")
 data_location = os.path.join(location, "data")
