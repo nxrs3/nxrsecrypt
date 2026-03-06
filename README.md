@@ -163,7 +163,7 @@ encrypt // <encryption mapping> // <text>
 ```
 Decrypting encrypted text:
 ```
-decrypt // <encryption mapping> // <text> - decrypt text
+decrypt // <encryption mapping> // <text>
 ```
 
 🔄 Reinitialization:
