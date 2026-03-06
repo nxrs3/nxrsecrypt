@@ -8,6 +8,8 @@
 `nxrseCrypt` is a lightweight CLI text encryption/decryption tool, coded in python3.  
 It uses mapping files stored in `data/encryption_mappings` to convert characters into chunks of random chracters. Only users with the correct corresponding mapping file can decrypt the text.
 
+! Never share your encryption mapping with anyone you dont want decrypting your encrypted text !
+
 ![Screenshot](images/screenshot.jpg)
 
 This is my first big project & github repo, and is not a professional, i made this for fun to communicate privatly with my friends.
