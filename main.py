@@ -210,6 +210,12 @@ def cmd_get_config(args):
     print(config)
 
 def cmd_reset(args):
+    reset_confirmation = input("   are you sure? (y/n):")
+    if reset_confirmation == "y":
+        continue
+    else:
+        cli_system.info("reset aborted")
+        break
     new_user_path = os.path.join(data_location, "new_user")
     with open(new_user_path, "w") as f:
         cli_system.info("regenerated 'new_user' file")
