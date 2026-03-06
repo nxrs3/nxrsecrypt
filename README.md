@@ -27,6 +27,20 @@ Let me know if it's compatible with windows and macos
 - ⚠️ Error messages for unsupported characters, invalid encrypted input, etc.
 - 💬 CLI feedback with success, error, and info messages.
 
+## 🎯 Use Cases
+
+**Privately messaging others**\
+Create an encryption map for a person or group, securely share it with them, and communicate using encrypted text.
+
+**Encrypting documents on external storage**\
+If you store sensitive files (notes, passwords, etc.) on a USB drive or other external device, anyone who gets access could read them. Encrypt the text with nxrseCrypt so it cannot be viewed without the corresponding encryption map.
+
+### 🔐 Extra Security Tip
+
+Consider storing several decoy encryption mappings alongside your real ones, and avoid naming important mappings after their actual purpose.
+
+For example, keep 20+ mappings with generic or misleading names. If someone gains access to your system, it becomes much harder for them to identify which mapping is actually used for decrypting sensitive data.
+
 
 ## 📥 Installation
 
@@ -88,21 +102,21 @@ funcsave nxrsecrypt
 
 ## 🛠️ Usage & commands
 
-▶️ Run nxrsecrypt:
+#### ▶️ Run nxrsecrypt:
 ```
 nxrsecrypt
 ```
 Running if you did not do step 3 of the installation:
 ```
 python3 ~/nxrsecrypt/main.py
-```
+``` 
 
-🛠️ nxrseCrypt commands:
+### 🛠️ nxrseCrypt commands
 
 commands are split by ' // ' so for instance, in the command 'a // x // y // z':
 'a' is the command, 'x' is argument 1, 'y' is argument 2, 'z' is argument 3
 
-📌 Basic commands:
+#### 📌 Basic commands:
 
 Show command overview:
 ```
@@ -117,7 +131,7 @@ Restart nxrsecrypt:
 restart
 ```
 
-🗺️ Creating and managing encryption maps:
+#### 🗺️ Creating and managing encryption maps:
 
 Listing encryption maps:
 ```
@@ -136,7 +150,7 @@ displaying a map:
 get-em // <name of mapping>
 ```
 
-📄 Managing encryption mapping chracter lists, if anything other than the default list is needed:
+#### 📄 Managing encryption mapping chracter lists, if anything other than the default list is needed:
 
 Listing character lists:
 ```
@@ -155,7 +169,7 @@ Displaying a character list:
 get-cl // <name of list>
 ```
 
-🔐 Encryption:
+#### 🔐 Encryption:
 
 Encrypting text:
 ```
@@ -166,14 +180,14 @@ Decrypting encrypted text:
 decrypt // <encryption mapping> // <text>
 ```
 
-🔄 Reinitialization:
+#### 🔄 Reinitialization:
 if you wish to reset the state of encryption mappings, character lists, config file,
 and other general data, run:
 ```
 reset
 ```
 
-## ⚙️ Configuration
+### ⚙️ Configuration
 
 You can edit the user config file located ~/nxrsecrypt/config.
 
