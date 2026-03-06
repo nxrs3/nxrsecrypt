@@ -222,7 +222,7 @@ def cmd_reset(args):
         with open(example_em_location, "r") as f:
             example_em = f.read()
         with open(os.path.join(em_location, "example"), "w") as f:
-        f.write(example_em)
+            f.write(example_em)
         cli_system.info("regenerating 'default' encryption mapping character list")
         with open(default_cl_location, "r") as f:
             default_cl = f.read()
