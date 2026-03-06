@@ -104,7 +104,7 @@ funcsave nxrsecrypt
 
 ## 🛠️ Usage & commands
 
-#### ▶️ Run nxrsecrypt:
+### ▶️ Run nxrsecrypt:
 ```
 nxrsecrypt
 ```
