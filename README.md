@@ -56,6 +56,8 @@ apt install python3-rich
 
 3. ▶️ Create a command to easily run nxrsecrypt:
 
+🐧 Linux:
+
 using bash:
 
 ```bash
