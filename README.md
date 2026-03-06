@@ -133,7 +133,7 @@ gen-em // <name> // <chunk length/strength (2-10)> // <character list (anything 
 ```
 displaying a map:
 ```
-get-em // <name mapping>
+get-em // <name of mapping>
 ```
 
 📄 Managing encryption mapping chracter lists, if anything other than the default list is needed:
