@@ -97,7 +97,7 @@ Running if you did not do step 3 of the installation:
 python3 ~/nxrsecrypt/main.py
 ```
 
-🛠️ Commands:
+🛠️ nxrseCrypt commands:
 
 commands are split by ' // ' so for instance, in the command 'a // x // y // z':
 'a' is the command, 'x' is argument 1, 'y' is argument 2, 'z' is argument 3
