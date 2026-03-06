@@ -81,7 +81,7 @@ apt install python3-rich
 using bash:
 
 ```bash
-echo 'mycmd() { python3 ~/nxrsecrypt/main.py; }' >> ~/.bashrc
+echo 'nxrsecrypt() { python3 ~/nxrsecrypt/main.py; }' >> ~/.bashrc
 source ~/.bashrc
 ```
 
