@@ -212,33 +212,31 @@ def cmd_get_config(args):
 def cmd_reset(args):
     reset_confirmation = input("   are you sure? (y/n):")
     if reset_confirmation == "y":
-        continue
+        new_user_path = os.path.join(data_location, "new_user")
+        with open(new_user_path, "w") as f:
+            cli_system.info("regenerated 'new_user' file")
+        cli_system.info("deleting 'encryption_mappings' folder and creating a new one")
+        shutil.rmtree(em_location, ignore_errors=True)
+        os.makedirs(os.path.join(em_location, "character_lists"), exist_ok=True)
+        cli_system.info("regenerating 'example' encryption mapping")
+        with open(example_em_location, "r") as f:
+            example_em = f.read()
+        with open(os.path.join(em_location, "example"), "w") as f:
+        f.write(example_em)
+        cli_system.info("regenerating 'default' encryption mapping character list")
+        with open(default_cl_location, "r") as f:
+            default_cl = f.read()
+        with open(os.path.join(char_list_location, "default"), "w") as f:
+            f.write(default_cl)
+        cli_system.info("resetting config file")
+        with open(default_config_location, "r") as f:
+            default_config = f.read()
+        with open(config_location, "w") as f:
+            f.write(default_config)
+        cli_system.load_config(config_location, config_module_location)
+        cli_system.success("reset nxrsecrypt")
     else:
         cli_system.info("reset aborted")
-        break
-    new_user_path = os.path.join(data_location, "new_user")
-    with open(new_user_path, "w") as f:
-        cli_system.info("regenerated 'new_user' file")
-    cli_system.info("deleting 'encryption_mappings' folder and creating a new one")
-    shutil.rmtree(em_location, ignore_errors=True)
-    os.makedirs(os.path.join(em_location, "character_lists"), exist_ok=True)
-    cli_system.info("regenerating 'example' encryption mapping")
-    with open(example_em_location, "r") as f:
-        example_em = f.read()
-    with open(os.path.join(em_location, "example"), "w") as f:
-        f.write(example_em)
-    cli_system.info("regenerating 'default' encryption mapping character list")
-    with open(default_cl_location, "r") as f:
-        default_cl = f.read()
-    with open(os.path.join(char_list_location, "default"), "w") as f:
-        f.write(default_cl)
-    cli_system.info("resetting config file")
-    with open(default_config_location, "r") as f:
-        default_config = f.read()
-    with open(config_location, "w") as f:
-        f.write(default_config)
-    cli_system.load_config(config_location, config_module_location)
-    cli_system.success("reset nxrsecrypt")
 
 # -----------------------------
 # Command map
