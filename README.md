@@ -9,7 +9,7 @@
 It uses mapping files stored in `data/encryption_mappings` to convert characters into chunks of random chracters. Only users with the correct corresponding mapping file can decrypt the text.
 
 This is my first big project, and is not a professional, i made this for fun to communicate privatly with my friends.
-Feel free to criticize.
+Feel free to criticize and report issues.
 
 Only tested on linux
 
