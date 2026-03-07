@@ -35,4 +35,5 @@ headline_color = "bold cyan"
 result_color = "bold blue"
 command_prompt_color = "cyan"
 welcome_message = True
+headline_text = f"--- nxrseCrypt - v-{version} ---"
 command_prompt = f"{user} - nxrsecrypt"

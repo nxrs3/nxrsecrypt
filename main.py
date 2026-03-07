@@ -7,7 +7,7 @@ import shutil
 import sys
 
 def clear():
-    cli_system.clear_terminal(f"--- nxrseCrypt - v-{version} ---")
+    cli_system.clear_terminal(headline_text) # f"--- nxrseCrypt - v-{version} ---"
 
 def welcome_user():
     new_user_path = os.path.join(data_location, "new_user")
