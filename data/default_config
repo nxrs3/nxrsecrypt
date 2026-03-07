@@ -34,5 +34,5 @@ headline_color = "bold cyan"
 result_color = "bold blue"
 command_prompt_color = "cyan"
 welcome_message = True
-headline_text = f"--- nxrseCrypt - v-{version} ---"
+headline_text = f"--- nxrseCrypt - v-{version} - MIT License | (c) 2026 nxrs3 ---"
 command_prompt = f"{user} - nxrsecrypt"
