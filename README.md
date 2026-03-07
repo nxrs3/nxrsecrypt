@@ -1,6 +1,6 @@
 # nxrseCrypt
 MIT License\
-Copyright (c) 2026 nxrs3
+© 2026 nxrs3
 
 **Version:** Beta
 
@@ -235,6 +235,15 @@ and restart:
 ```
 restart
 ```
+
+#### ⚠️ Fixing Config Errors
+
+If a misconfiguration causes an error in modules/config.py when running nxrsecrypt, reset the config manually as follows:
+
+1. Open ~/nxrsecrypt/data/default_config in a text editor and copy all its contents.
+2. Open ~/nxrsecrypt/modules/config.py, delete the existing (faulty) content, and paste the copied text.
+3. Run nxrsecrypt, then execute `reset-config` followed by `restart`. You should be all set.
+
 \
 \
-Copyright (c) 2026 nxrs3
+© 2026 nxrs3
