@@ -37,15 +37,12 @@ def cmd_clear(args):
     clear()
 
 def cmd_info(args):
-    print(
-        "",
-        "   version:", version,
-        "   license:", License,
-        "",
-        "   description:",
-        description,
-        ""
-    )
+    print()
+    print("version:", version)
+    print("license:", License)
+    print()
+    print("description:")
+    print(description)
 
 def cmd_list_em(args):
     files = [f for f in os.listdir(em_location) if os.path.isfile(os.path.join(em_location, f))]
