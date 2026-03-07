@@ -1,6 +1,8 @@
 # nxrseCrypt
-MIT License\
-© 2026 nxrs3
+
+**License**\
+This project is licensed under the GNU GPL v2.0.
+See the LICENSE file for details.
 
 **Version:** Beta
 
