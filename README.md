@@ -46,53 +46,53 @@ For example, keep 20+ mappings with generic or misleading names. If someone gain
 
 ## 📥 Installation
 
-1. 🔗 Clone the repository:
+### 1. 🔗 Clone the repository:
 
 ```fish
 git clone https://github.com/nxrs3/nxrsecrypt
 ```
 
-2. 🎨 Install the 'rich' python module:
+### 2. 🎨 Install the 'rich' python module:
 
-🐧 Linux:
+#### 🐧 Linux:
 
-using pip:
+##### using pip:
 
 ```fish
 pip install rich
 ```
 
-using pacman:
+##### using pacman:
 
 ```fish
 sudo pacman -S python-rich
 ```
 
-using apt:
+##### using apt:
 
 ```fish
 apt install python3-rich
 ```
 
-3. ▶️ Create a command to easily run nxrsecrypt:
+### 3. ▶️ Create a command to easily run nxrsecrypt:
 
-🐧 Linux:
+#### 🐧 Linux:
 
-using bash:
+##### using bash:
 
 ```bash
 echo 'nxrsecrypt() { python3 ~/nxrsecrypt/main.py; }' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-using zsh:
+##### using zsh:
 
 ```zsh
 echo 'nxrsecrypt() { python3 ~/nxrsecrypt/main.py; }' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-using fish:
+##### using fish:
 
 ```fish
 function nxrsecrypt  
@@ -104,7 +104,7 @@ funcsave nxrsecrypt
 
 ## 🛠️ Usage & commands
 
-### ▶️ Run nxrsecrypt:
+### ▶️ Run nxrsecrypt
 ```
 nxrsecrypt
 ```
@@ -211,3 +211,6 @@ and
 ```
 restart
 ```
+
+
+Copyright (c) 2026 nxrs3
