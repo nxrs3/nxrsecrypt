@@ -38,10 +38,10 @@ def cmd_clear(args):
 
 def cmd_info(args):
     print()
-    print("version:", version)
-    print("license:", License)
+    print("   version:", version)
+    print("   license:", License)
     print()
-    print("description:")
+    print("   description:")
     print(description)
 
 def cmd_list_em(args):
