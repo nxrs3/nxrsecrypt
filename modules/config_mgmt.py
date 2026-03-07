@@ -9,7 +9,7 @@ def replace_value(file_path, config_variable, new_value):
     for i, line in enumerate(lines):
         name, sep, value = line.partition("=")
         if name.strip() == config_variable:
-            lines[i] = f"   {name.strip()} = {new_value}\n"
+            lines[i] = f"    {name.strip()} = {new_value}\n"
             found = True
             break
 
