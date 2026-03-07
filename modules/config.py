@@ -22,6 +22,13 @@ config_module_location = os.path.join(location, "modules", "config.py")
 
 # program information | editing correctly wont break anything, edit if you want
 version = "beta"
+License = "GNU General Public License v2.0."
+notice = "(c) 2026 nxrs3"
+description = """
+   nxrseCrypt is a lightweight CLI text encryption/decryption tool, coded in python3.
+   It uses mapping files stored in data/encryption_mappings to convert characters into chunks of random chracters.
+   Only users with the correct corresponding mapping file can decrypt the text.
+"""
 
 # other information | editing correctly wont break anything, edit if you want
 user = getuser()

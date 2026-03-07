@@ -36,6 +36,17 @@ def cmd_restart(args):
 def cmd_clear(args):
     clear()
 
+def cmd_info(args):
+    print(
+        "",
+        "   version:", version,
+        "   license:", License,
+        "",
+        "   description:",
+        description,
+        ""
+    )
+
 def cmd_list_em(args):
     files = [f for f in os.listdir(em_location) if os.path.isfile(os.path.join(em_location, f))]
     if files:
@@ -256,6 +267,7 @@ commands = {
     "exit": cmd_exit,
     "restart": cmd_restart,
     "clear": cmd_clear,
+    "info": cmd_info,
     "list-em": cmd_list_em,
     "get-em": cmd_get_em,
     "encrypt": cmd_encrypt,
