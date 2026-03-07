@@ -1,6 +1,6 @@
 # nxrseCrypt
 MIT License\
-Copyright (c) 2026 nxrs3
+© 2026 nxrs3
 
 **Version:** Beta
 
