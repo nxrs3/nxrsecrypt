@@ -15,6 +15,8 @@ def replace_value(file_path, config_variable, new_value):
 
     if not found:
         cli_system.error(f"{config_variable} not found in file")
+        return
 
     with open(file_path, "w") as f:
         f.writelines(lines)
+    cli_system.success(f"set variable '{config_variable} to '{new_value}'")

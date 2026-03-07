@@ -218,7 +218,6 @@ def cmd_set_config(args):
         cli_system.error("you did not specify a value")
         return
     config_mgmt.replace_value(config_location, arg1, arg2)
-    cli_system.success(f"set variable '{arg1}' to '{arg2}'")
 
 def cmd_reset(args):
     reset_confirmation = input("   are you sure? (y/n):")
