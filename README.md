@@ -193,7 +193,9 @@ reset
 
 ### ⚙️ Configuration
 
-You can edit the user config file located ~/nxrsecrypt/config.
+#### 🔧 Manual configuration
+
+Edit the user config file located ~/nxrsecrypt/config.
 
 To add what you modified to the actual config:
 ```
@@ -203,13 +205,33 @@ and
 ```
 restart
 ```
-
-
+\
 To reset the config:
 ```
 reset-config
 ```
 and
+```
+restart
+```
+
+#### </> Cli configuration (NEW)
+
+View the config:
+```
+get-config
+```
+
+Change a variable in the config:
+```
+set-config // <variable> // <new value>
+```
+
+Then save:
+```
+load-config
+```
+and restart:
 ```
 restart
 ```
