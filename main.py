@@ -222,7 +222,7 @@ def cmd_set_config(args):
     if arg1 is None:
         cli_system.error("you did not specify a config variable")
         return
-    if arg1 is None:
+    if arg2 is None:
         cli_system.error("you did not specify a value")
         return
     config_mgmt.replace_value(config_location, arg1, arg2)
