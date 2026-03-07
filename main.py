@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from modules import cli_system, encryption, map_generator
+from modules import cli_system, encryption, map_generator, config_mgmt
 from modules.config import *
 from rich import print
 import os
@@ -209,6 +209,17 @@ def cmd_get_config(args):
     print()
     print(config)
 
+def cmd_set_config(args):
+    arg1, arg2 = args[1], args[2]
+    if arg1 is None:
+        cli_system.error("you did not specify a config variable")
+        return
+    if arg1 is None:
+        cli_system.error("you did not specify a value")
+        return
+    config_mgmt.replace_value(config_location, arg1, arg2)
+    cli_system.success(f"set variable '{arg1}' to '{arg2}'")
+
 def cmd_reset(args):
     reset_confirmation = input("   are you sure? (y/n):")
     if reset_confirmation == "y":
@@ -259,6 +270,7 @@ commands = {
     "load-config": cmd_load_config,
     "reset-config": cmd_reset_config,
     "get-config": cmd_get_config,
+    "set-config": cmd_set_config,
     "reset": cmd_reset,
 }
 
