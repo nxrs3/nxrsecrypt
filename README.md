@@ -1,4 +1,6 @@
 # nxrseCrypt
+MIT License\
+Copyright (c) 2026 nxrs3
 
 **Version:** Beta
 
@@ -211,6 +213,6 @@ and
 ```
 restart
 ```
-
-
+\
+\
 Copyright (c) 2026 nxrs3
