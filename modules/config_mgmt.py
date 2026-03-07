@@ -1,6 +1,5 @@
-from modules import cli_system
-
 def replace_value(file_path, config_variable, new_value):
+    from . import cli_system # inside function to avoid circular impot !!
     with open(file_path, "r") as f:
         lines = f.readlines()
 
@@ -22,6 +21,7 @@ def replace_value(file_path, config_variable, new_value):
     cli_system.success(f"set variable '{config_variable}' to '{new_value}'")
 
 def emergency_config_reset(default_conf_path, config_module_path, user_config_path):
+    from . import cli_system # inside function to avoid circular impot !!
     cli_system.error("error in config, resetting to default config")
 
     with open(default_conf_path, "r") as f:
