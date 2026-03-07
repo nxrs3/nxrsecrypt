@@ -228,11 +228,7 @@ Change a variable in the config:
 set-config // <variable> // <new value>
 ```
 
-Then save:
-```
-load-config
-```
-and restart:
+then restart:
 ```
 restart
 ```

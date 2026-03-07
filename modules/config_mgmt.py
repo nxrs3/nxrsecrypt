@@ -1,4 +1,5 @@
 from modules import cli_system
+from .config import *
 
 def replace_value(file_path, config_variable, new_value):
     with open(file_path, "r") as f:
@@ -19,4 +20,5 @@ def replace_value(file_path, config_variable, new_value):
 
     with open(file_path, "w") as f:
         f.writelines(lines)
-    cli_system.success(f"set variable '{config_variable} to '{new_value}'")
+    cli_system.load_config(config_location, config_module_location)
+    cli_system.success(f"set variable '{config_variable}' to '{new_value}'")
