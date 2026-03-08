@@ -16,7 +16,7 @@ It uses mapping files stored in `data/encryption_mappings` to convert characters
 
 ! Never share an encryption mapping with anyone you dont want decrypting your encrypted text, keep it secure. !
 
-This is my first big project & github repo, and is not a professional, i made this for fun to communicate privatly with my friends.
+This is my first big project & github repo, and is not a professional, I made this for fun to communicate privatly with my friends.
 Feel free to criticize and report issues.
 
 Only tested on linux,
@@ -185,7 +185,7 @@ decrypt // <encryption mapping> // <text>
 ```
 
 #### 🔄 Reinitialization:
-if you wish to reset the state of encryption mappings, character lists, config file,
+If you wish to reset the state of encryption mappings, character lists, config file,
 and other general data, run:
 ```
 reset
@@ -226,7 +226,6 @@ Change a variable in the config:
 ```
 set-config // <variable> // <new value>
 ```
-
 then restart:
 ```
 restart
