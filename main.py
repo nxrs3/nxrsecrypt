@@ -226,7 +226,7 @@ def cmd_configless_reset_config(args):
     with open(config_module_location, "w") as f:
         f.write(default_config)
     
-    subprocess.run("python3", os.path.join(location, "main.py"), shell=True)
+    subprocess.run("python3 " + os.path.join(location, "main.py"), shell=True)
     exit()
 
 def cmd_get_config(args):
