@@ -10,6 +10,7 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 def welcome_user():
+    cli_system.set_header(headline_text, headline_color)
     new_user_path = os.path.join(data_location, "new_user")
     new_user = os.path.exists(new_user_path)
     if new_user:
@@ -293,6 +294,7 @@ def main():
     if welcome_message:
         welcome_user()
     while True:
+        cli_system.set_header(headline_text, headline_color)
         args = cli_system.prompt(command_prompt, " // ")
         cmd = args[0]
         if cmd in commands:
