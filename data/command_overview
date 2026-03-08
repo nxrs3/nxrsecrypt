@@ -29,6 +29,7 @@
    reset-config - reset config to default config
    load-config - copy the user config file to the actual config module
    get-config - display the current config
-   set-config // <variable> // <new value> - change the value of a variable in the config 
+   set-config // <variable> // <new value> - change the value of a variable in the config
+   check-config - check the config module for errors before restarting
 
    check the README.md for detailed documentation :)
