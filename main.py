@@ -270,7 +270,6 @@ def cmd_update(args):
         print("   " + line)
     for line in result.stderr.splitlines():
         print("   " + line)
-    print()
 
 # -----------------------------
 # Command map
