@@ -2,15 +2,18 @@
 from .config import *
 import os
 import subprocess
+import sys
 from rich import print
 from rich.prompt import Prompt
 from typing import Optional, Tuple
 
-def clear_terminal(text: str):
-    """Clears the terminal and prints a headline message."""
-    os.system("cls" if os.name == "nt" else "clear")
-    print(f"[{headline_color}] {text} [/{headline_color}]")
-    print()
+def set_header(text, color):
+    sys.stdout.write("\033[s")
+    sys.stdout.write("\033[1;1H")
+    sys.stdout.write("\033[2K")
+    sys.stdout.write(f" [{color}]{text}[/{color}]")
+    sys.stdout.write("\033[u")
+    sys.stdout.flush()
 
 def reload(path: str):
     """Reloads the given Python script and exits the current process."""

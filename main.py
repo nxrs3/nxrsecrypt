@@ -7,7 +7,7 @@ import shutil
 import sys
 
 def clear():
-    cli_system.clear_terminal(headline_text) # f"--- nxrseCrypt - v-{version} ---"
+    os.system("cls" if os.name == "nt" else "clear")
 
 def welcome_user():
     new_user_path = os.path.join(data_location, "new_user")
@@ -29,7 +29,7 @@ def cmd_lc(args):
     cli_system.display_command_overview(os.path.join(data_location, "command_overview"))
 
 def cmd_exit(args):
-    os.system("cls" if os.name == "nt" else "clear")
+    clear()
     sys.exit()
 
 def cmd_restart(args):
@@ -300,6 +300,7 @@ def main():
             continue
         else:
             cli_system.error(f"'{cmd}' is not a recognised command")
+        cli_system.set_header(headline_text, headline_color)
 
 if __name__ == "__main__":
     main()
