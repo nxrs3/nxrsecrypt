@@ -296,7 +296,7 @@ def main():
         cmd = args[0]
         if cmd in commands:
             commands[cmd](args)
-        elif cmd == "":
+        elif cmd == "" or cmd is None:
             continue
         else:
             cli_system.error(f"'{cmd}' is not a recognised command")
