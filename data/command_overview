@@ -30,5 +30,6 @@
    load-config - copy the user config file to the actual config module
    get-config - display the current config
    set-config // <variable> // <new value> - change the value of a variable in the config
+   update - pull the lastest changes from the github repo
 
-   check the README.md for detailed documentation :)
+   check the README.md for more detailed documentation :)

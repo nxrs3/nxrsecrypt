@@ -5,6 +5,7 @@ from rich import print
 import os
 import shutil
 import sys
+import subprocess
 
 def clear():
     cli_system.clear_history(headline_text)
@@ -257,6 +258,11 @@ def cmd_reset(args):
     else:
         cli_system.info("reset aborted")
 
+def cmd_update():
+    cli_system.info("pulling latest changes")
+    subprocess.run(["git", "pull"], cwd=location)
+    print()
+
 # -----------------------------
 # Command map
 # -----------------------------
@@ -281,6 +287,7 @@ commands = {
     "get-config": cmd_get_config,
     "set-config": cmd_set_config,
     "reset": cmd_reset,
+    "update": cmd_update,
 }
 
 # -----------------------------
