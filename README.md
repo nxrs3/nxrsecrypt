@@ -217,7 +217,7 @@ restart
 
 #### </> Cli configuration (NEW)
 
-View the config, preferably in another terminal window also running nxrsecrypt (make sure your terminal is zoomed out enough to view the entire config):
+View the config
 ```
 get-config
 ```
