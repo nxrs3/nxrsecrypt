@@ -1,3 +1,4 @@
+from sys import exception
 from modules import cli_system
 from .config import *
 
@@ -23,3 +24,15 @@ def replace_value(file_path, config_variable, new_value):
         f.writelines(lines)
     cli_system.success(f"set variable '{config_variable}' to: {new_value}")
     cli_system.load_config(config_location, config_module_location)
+
+def check_config(file_path):
+    try:
+        from modules import config
+        cli_system.info("error not found")
+    except Exception as e:
+        cli_system.error("error found in config file:")
+        print()
+        print(e)
+        print()
+        cli_system.info("fix the error manually or reset the config with `reset-config` before restarting")
+

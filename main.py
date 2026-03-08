@@ -229,14 +229,7 @@ def cmd_set_config(args):
     config_mgmt.replace_value(config_location, arg1, arg2)
 
 def cmd_check_config(args):
-    try:
-        from modules import config
-    except Exception as e:
-        cli_system.error("error found in config file:")
-        print()
-        print(e)
-        print()
-        cli_system.info("fix the error manually or reset the config with `reset-config` before restarting")
+    config_mgmt.check_config(config_module_location)
 
 def cmd_reset(args):
     reset_confirmation = input("   are you sure? (y/n):")
