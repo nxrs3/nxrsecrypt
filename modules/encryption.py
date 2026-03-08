@@ -2,33 +2,33 @@
 from . import cli_system
 
 
-def load_mapping(path):
+from typing import cast
+
+def load_mapping(path: str) -> dict[str, str]:
     """
     Load mapping file into dict using strict ' = ' delimiter.
     """
-
-    mapping = {}
+    mapping: dict[str, str] = {}
 
     with open(path, "r") as f:
         for line in f:
             line = line.rstrip("\n")
-
             if not line.strip():
                 continue
 
             if " = " not in line:
                 cli_system.error(f"invalid line in mapping: '{line}'")
-                return None
+                return {}  # return empty dict, not None
 
             key, value = line.split(" = ", 1)
 
-            if key == "":
+            if not key:
                 cli_system.error(f"invalid key in mapping: '{line}'")
-                return None
+                return {}
 
-            if value == "":
+            if not value:
                 cli_system.error(f"invalid value in mapping: '{line}'")
-                return None
+                return {}
 
             mapping[key] = value
 
