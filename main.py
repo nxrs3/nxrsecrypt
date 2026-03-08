@@ -260,7 +260,16 @@ def cmd_reset(args):
 
 def cmd_update(args):
     cli_system.info("pulling latest changes")
-    subprocess.run(["git", "pull"], cwd=location)
+    result = subprocess.run(
+        ["git", "pull"],
+        cwd=location,
+        capture_output=True,
+        text=True
+    )
+    for line in result.stdout.splitlines():
+        print("   " + line)
+    for line in result.stderr.splitlines():
+        print("   " + line)
     print()
 
 # -----------------------------
