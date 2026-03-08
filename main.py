@@ -228,9 +228,6 @@ def cmd_set_config(args):
         return
     config_mgmt.replace_value(config_location, arg1, arg2)
 
-def cmd_check_config(args):
-    config_mgmt.check_config(config_module_location)
-
 def cmd_reset(args):
     reset_confirmation = input("   are you sure? (y/n):")
     if reset_confirmation == "y":
@@ -283,7 +280,6 @@ commands = {
     "reset-config": cmd_reset_config,
     "get-config": cmd_get_config,
     "set-config": cmd_set_config,
-    "check-config": cmd_check_config,
     "reset": cmd_reset,
 }
 
