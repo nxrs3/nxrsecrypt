@@ -289,6 +289,7 @@ commands = {
 # -----------------------------
 def main():
     clear()
+    cli_system.set_header(headline_text, headline_color)
     if welcome_message:
         welcome_user()
     while True:

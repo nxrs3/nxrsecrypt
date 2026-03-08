@@ -6,14 +6,18 @@ import sys
 from rich import print
 from rich.prompt import Prompt
 from typing import Optional, Tuple
+from rich.console import Console
+
+console = Console()
 
 def set_header(text, color):
-    sys.stdout.write("\033[s")
-    sys.stdout.write("\033[1;1H")
-    sys.stdout.write("\033[2K")
-    sys.stdout.write(f" [{color}]{text}[/{color}]")
-    sys.stdout.write("\033[u")
-    sys.stdout.flush()
+    console.file.write("\033[s")
+    console.file.write("\033[1;1H")
+    console.file.write("\033[2K")
+    console.print(f" [{color}]{text}[/{color}]")
+    console.print("", end="")
+    console.file.write("\033[u")
+    console.file.flush()
 
 def reload(path: str):
     """Reloads the given Python script and exits the current process."""
