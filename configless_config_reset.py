@@ -14,4 +14,3 @@ with open(config_module_location, "w") as f:
     f.write(default_config)
     
 subprocess.run("python3 " + os.path.join(location, "main.py"), shell=True)
-exit()
