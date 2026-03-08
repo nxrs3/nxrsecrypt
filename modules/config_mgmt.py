@@ -2,6 +2,7 @@ from modules import cli_system
 from .config import *
 
 def replace_value(file_path, config_variable, new_value):
+    cli_system.info(f"looking for '{config_variable}'")
     with open(file_path, "r") as f:
         lines = f.readlines()
 
@@ -15,10 +16,10 @@ def replace_value(file_path, config_variable, new_value):
             break
 
     if not found:
-        cli_system.error(f"{config_variable} not found in file")
+        cli_system.error(f"'{config_variable}' not found in file")
         return
 
     with open(file_path, "w") as f:
         f.writelines(lines)
+    cli_system.success(f"set variable '{config_variable}' to: {new_value}")
     cli_system.load_config(config_location, config_module_location)
-    cli_system.success(f"set variable '{config_variable}' to '{new_value}'")
