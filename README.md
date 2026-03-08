@@ -1,7 +1,6 @@
 # nxrseCrypt
 
-**License**\
-GNU General Public License v2.0
+**License:** GNU General Public License v2.0
 
 **Version:** Beta
 
