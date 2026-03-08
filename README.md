@@ -14,13 +14,13 @@ It uses mapping files stored in `data/encryption_mappings` to convert characters
 
 ![Screenshot](images/use_case_screenshot.jpg)
 
-! Never share an encryption mapping with anyone you dont want decrypting your encrypted text, keep it secure. !
+⚠️ Never share an encryption mapping with anyone you don't want decrypting your encrypted text, keep it secure. ⚠️
 
-This is my first big project & github repo, and is not a professional, I made this for fun to communicate privatly with my friends.
+This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.
 Feel free to criticize and report issues.
 
-Only tested on linux,
-Let me know if it's compatible with windows and macos
+Only tested on Linux,
+Let me know if it's compatible with windows and/or macos
 
 ## ✨ Features
 
@@ -158,7 +158,7 @@ displaying a map:
 get-em // <name of mapping>
 ```
 
-#### 📄 Managing encryption mapping chracter lists, if anything other than the default list is needed:
+#### 📄 Managing encryption mapping character lists, if anything other than the default list is needed:
 
 Listing character lists:
 ```
@@ -170,7 +170,7 @@ del-em // <name of character list>
 ```
 Creating a list:
 ```
-create-cl // <name> // <chracters>
+create-cl // <name> // <characters>
 ```
 Displaying a character list:
 ```
