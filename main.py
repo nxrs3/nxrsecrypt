@@ -8,11 +8,21 @@ import sys
 
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
+    cli_system.set_header(headline_text, headline_color)
+    # move cursor to line 3 (below header + blank line)
+    sys.stdout.write("\033[3;1H")
+    sys.stdout.flush()
 
 def welcome_user():
     cli_system.set_header(headline_text, headline_color)
+    
+    # Move cursor to line 3 (below header + blank line)
+    sys.stdout.write("\033[3;1H")
+    sys.stdout.flush()
+
     new_user_path = os.path.join(data_location, "new_user")
     new_user = os.path.exists(new_user_path)
+    
     if new_user:
         with open(os.path.join(data_location, "copyright_message"), "r") as f:
             print(f.read())
@@ -20,6 +30,7 @@ def welcome_user():
         os.remove(new_user_path)
     else:
         print(f"  welcome back, {user}")
+    
     print("  type 'lc' to view commands")
 
 # -----------------------------
@@ -30,7 +41,7 @@ def cmd_lc(args):
     cli_system.display_command_overview(os.path.join(data_location, "command_overview"))
 
 def cmd_exit(args):
-    clear()
+    os.system("cls" if os.name == "nt" else "clear")
     sys.exit()
 
 def cmd_restart(args):
