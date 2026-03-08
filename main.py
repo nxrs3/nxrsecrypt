@@ -17,6 +17,7 @@ def welcome_user():
         with open(os.path.join(data_location, "copyright_message"), "r") as f:
             print(f.read())
         print(f"  welcome to nxrsecrypt {user}, the README.md contains the documentation you need")
+        print("  contact me via nxrs3@proton.me, if you found any bugs or got any suggestions")
         os.remove(new_user_path)
     else:
         print(f"  welcome back, {user}")
