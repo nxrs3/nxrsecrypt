@@ -258,7 +258,7 @@ def cmd_reset(args):
     else:
         cli_system.info("reset aborted")
 
-def cmd_update():
+def cmd_update(args):
     cli_system.info("pulling latest changes")
     subprocess.run(["git", "pull"], cwd=location)
     print()
