@@ -2,30 +2,15 @@
 from .config import *
 import os
 import subprocess
-import sys
 from rich import print
 from rich.prompt import Prompt
 from typing import Optional, Tuple
-from rich.console import Console
 
-console = Console()
-
-def set_header(text, color):
-    # save cursor
-    console.file.write("\033[s")
-    
-    # line 1: header
-    console.file.write("\033[1;1H")
-    console.file.write("\033[2K")  # clear line
-    console.print(f" [{color}]{text}[/{color}]", end="")
-    
-    # line 2: always blank
-    console.file.write("\033[2;1H")
-    console.file.write("\033[2K")  # clear line
-    
-    # restore cursor
-    console.file.write("\033[u")
-    console.file.flush()
+def clear_history(text: str):
+    """Clears the terminal and prints a headline message."""
+    os.system("cls" if os.name == "nt" else "clear")
+    print(f"[{headline_color}] {text} [/{headline_color}]")
+    print()
 
 def reload(path: str):
     """Reloads the given Python script and exits the current process."""

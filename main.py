@@ -7,15 +7,9 @@ import shutil
 import sys
 
 def clear():
-    os.system("cls" if os.name == "nt" else "clear")
-    cli_system.set_header(headline_text, headline_color)
-    sys.stdout.write("\033[3;1H")
-    sys.stdout.flush()
+    cli_system.clear_history(headline_text)
 
 def welcome_user():
-    cli_system.set_header(headline_text, headline_color)
-    sys.stdout.write("\033[3;1H")
-    sys.stdout.flush()
     new_user_path = os.path.join(data_location, "new_user")
     new_user = os.path.exists(new_user_path)
     if new_user:
@@ -295,20 +289,17 @@ commands = {
 # -----------------------------
 def main():
     clear()
-    cli_system.set_header(headline_text, headline_color)
     if welcome_message:
         welcome_user()
     while True:
-        cli_system.set_header(headline_text, headline_color)
         args = cli_system.prompt(command_prompt, " // ")
         cmd = args[0]
         if cmd in commands:
             commands[cmd](args)
-        elif cmd == "" or cmd is None:
+        elif cmd == "":
             continue
         else:
             cli_system.error(f"'{cmd}' is not a recognised command")
-        cli_system.set_header(headline_text, headline_color)
 
 if __name__ == "__main__":
     main()
