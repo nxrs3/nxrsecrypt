@@ -14,7 +14,7 @@ It uses mapping files stored in `~/nxrsecrypt/data/encryption_mappings` to conve
 
 ![nxrseCrypt in action](images/use_case_screenshot.jpg)
 
-⚠️ Never share an encryption mapping with anyone you don't want decrypting your encrypted text, keep it secure. ⚠️
+**! Never share an encryption mapping with anyone you don't want decrypting your encrypted text, keep it secure. !**
 
 This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.
 Feel free to criticize and report issues.
