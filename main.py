@@ -13,6 +13,8 @@ def welcome_user():
     new_user_path = os.path.join(data_location, "new_user")
     new_user = os.path.exists(new_user_path)
     if new_user:
+        with open(os.path.join(data_location, "copyright_message"), "r") as f:
+            print(f.read())
         print(f"  welcome to nxrsecrypt {user}, the README.md contains the documentation you need")
         os.remove(new_user_path)
     else:
