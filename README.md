@@ -130,6 +130,10 @@ Exit nxrsecrypt:
 ```
 exit
 ```
+Clear history:
+```
+clear
+```
 Restart nxrsecrypt:
 ```
 restart
