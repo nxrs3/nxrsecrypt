@@ -213,22 +213,6 @@ def cmd_reset_config(args):
     cli_system.load_config(config_location, config_module_location)
     cli_system.success("reset config")
 
-def cmd_configless_reset_config(args):
-    location = os.path.join(os.path.expanduser("~"), "nxrsecrypt")
-    default_config_location = os.path.join(location, "data", "default_config")
-    config_location = os.path.join(location, "config")
-    config_module_location = os.path.join(location, "modules", "config.py")
-
-    with open(default_config_location, "r") as f:
-        default_config = f.read()
-    with open(config_location, "w") as f:
-        f.write(default_config)
-    with open(config_module_location, "w") as f:
-        f.write(default_config)
-    
-    subprocess.run("python3 " + os.path.join(location, "main.py"), shell=True)
-    exit()
-
 def cmd_get_config(args):
     with open(config_module_location, "r") as f:
         config = f.read()
@@ -308,7 +292,6 @@ commands = {
     "get-cl": cmd_get_cl,
     "load-config": cmd_load_config,
     "reset-config": cmd_reset_config,
-    "reset-config --configless": cmd_configless_reset_config,
     "get-config": cmd_get_config,
     "set-config": cmd_set_config,
     "reset": cmd_reset,
