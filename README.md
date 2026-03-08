@@ -134,6 +134,10 @@ Restart nxrsecrypt:
 ```
 restart
 ```
+Update nxrsecrypt:
+```
+update
+```
 
 #### 🗺️ Creating and managing encryption maps:
 
