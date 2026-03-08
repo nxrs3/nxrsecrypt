@@ -42,9 +42,8 @@ def cmd_info(args):
     print()
     print("   version:", version)
     print("   license:", License)
-    print()
-    print("   description:")
-    print(description)
+    print("   contact me at:", "nxrs3@proton.me")
+    print("   description:", description)
 
 def cmd_list_em(args):
     files = [f for f in os.listdir(em_location) if os.path.isfile(os.path.join(em_location, f))]

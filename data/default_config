@@ -7,7 +7,7 @@
 import os
 from getpass import getuser
 
-# directory & file locations | only edit this if your nxrsecrypt dir is actually any other place than ~/
+# directory & file locations | please don't edit this
 home = os.path.expanduser("~")
 location = os.path.join(home, "nxrsecrypt")
 main_py_location = os.path.join(location, "main.py")
@@ -23,14 +23,13 @@ config_module_location = os.path.join(location, "modules", "config.py")
 # program information | editing correctly wont break anything, edit if you want
 version = "beta"
 License = "GNU General Public License v2.0."
-notice = "(c) 2026 nxrs3"
 description = """
    nxrseCrypt is a lightweight CLI text encryption/decryption tool, coded in python3.
    It uses mapping files stored in data/encryption_mappings to convert characters into chunks of random chracters.
    Only users with the correct corresponding mapping file can decrypt the text.
 """
 
-# other information | editing correctly wont break anything, edit if you want
+# user information | editing correctly wont break anything, edit if you want
 user = getuser()
 
 # customization | feel free to edit, as long as you know rich's color system
