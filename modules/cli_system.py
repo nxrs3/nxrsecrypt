@@ -36,7 +36,7 @@ def load_config(config: str, config_module: str):
         config_contents = f.read()
     with open(config_module, "w") as f:
         f.write(config_contents)
-    success("config saved, make sure your config contains no errors before restarting!")
+    success("config saved, restart to take the new config into effect")
 
 def display_command_overview(command_overview_path: str):
     """Displays the contents of a command overview file."""
