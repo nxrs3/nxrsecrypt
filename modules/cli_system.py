@@ -15,7 +15,7 @@ def set_header(text, color):
     console.file.write("\033[1;1H")
     console.file.write("\033[2K")
     console.print(f" [{color}]{text}[/{color}]")
-    console.print("", end="")
+    console.print("")
     console.file.write("\033[u")
     console.file.flush()
 
