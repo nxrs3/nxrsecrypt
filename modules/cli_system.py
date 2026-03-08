@@ -11,11 +11,19 @@ from rich.console import Console
 console = Console()
 
 def set_header(text, color):
+    # save cursor
     console.file.write("\033[s")
+    
+    # line 1: header
     console.file.write("\033[1;1H")
-    console.file.write("\033[2K")
-    console.print(f" [{color}]{text}[/{color}]")
-    console.print("")
+    console.file.write("\033[2K")  # clear line
+    console.print(f"[{color}]{text}[/{color}]", end="")
+    
+    # line 2: always blank
+    console.file.write("\033[2;1H")
+    console.file.write("\033[2K")  # clear line
+    
+    # restore cursor
     console.file.write("\033[u")
     console.file.flush()
 
