@@ -20,7 +20,6 @@ def welcome_user():
         os.remove(new_user_path)
     else:
         print(f"  welcome back, {user}")
-        print("  contact me via nxrs3@proton.me, if you found any bugs or got any suggestions")
     print("  type 'lc' to view commands")
 
 # -----------------------------
