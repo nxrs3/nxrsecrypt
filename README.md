@@ -252,4 +252,4 @@ python3 ~/nxrsecrypt/configless_config_reset.py
 
 \
 \
-© 2026 nxrs3 — GNU GPL v2.0
+© 2026 nxrs3 - GNU GPL v2.0
