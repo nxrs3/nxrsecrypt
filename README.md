@@ -14,11 +14,12 @@ It uses mapping files stored in `~/nxrsecrypt/data/encryption_mappings` to conve
 
 ![nxrseCrypt in action](images/use_case_screenshot.jpg)
 
-This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.\
-**This is is not made for personal use for the time being, rather; getting better at programming, git, and documenting**\
-Feel free to criticize and report issues.
+nxrseCrypt is my first major project and GitHub repository, created primarily to improve my programming, Git, and documentation skills.
+While it was originally built for private communication, it is not intended for production use at this time.
 
-Only tested on Linux,
+**I welcome criticism, and forks. if this inspires anyone to build an improved open-source version, i would love to see that.**
+
+Only tested on Linux, \
 Let me know if it's compatible with windows and/or macos
 
 ## ✨ Features
