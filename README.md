@@ -7,7 +7,7 @@
 
 ## 📋 Overview
 
-**This software is still in Beta! And is not intended for use**
+**This software is still in Beta! And is not intended for use, (yet)**
 
 `nxrseCrypt` is a lightweight CLI text encryption/decryption tool, coded in python3.  
 It uses mapping files stored in `~/nxrsecrypt/data/encryption_mappings` to convert characters into chunks of random chracters. Only users with the correct corresponding mapping file can decrypt the text.
@@ -15,7 +15,7 @@ It uses mapping files stored in `~/nxrsecrypt/data/encryption_mappings` to conve
 ![nxrseCrypt in action](images/use_case_screenshot.jpg)
 
 This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.\
-**This is is not made for personal use, rather; getting better at programming, git, and documenting**\
+**This is is not made for personal use for the time being, rather; getting better at programming, git, and documenting**\
 Feel free to criticize and report issues.
 
 Only tested on Linux,
