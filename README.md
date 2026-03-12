@@ -7,8 +7,6 @@
 
 ## 📋 Overview
 
-**currently working on implementing encryption for mappings folder**
-
 **This software is still in Beta! And is not intended for use yet**
 
 `nxrseCrypt` is a lightweight CLI text encryption/decryption tool, coded in python3.  
@@ -16,9 +14,8 @@ It uses mapping files stored in `~/nxrsecrypt/data/encryption_mappings` to conve
 
 ![nxrseCrypt in action](images/use_case_screenshot.jpg)
 
-**! Never share an encryption mapping with anyone you don't want decrypting your encrypted text, keep it secure. !**
-
-This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.
+This is my first big project & github repo, and is not professional, I made this for fun to communicate privatly with my friends.\
+**This is is not made for personal use, rather; getting better at programming, git, and documenting**\
 Feel free to criticize and report issues.
 
 Only tested on Linux,
@@ -63,7 +60,7 @@ git clone https://github.com/nxrs3/nxrsecrypt
 ```bash
 python3 -m venv ~/nxrsecrypt-venv
 source ~/nxrsecrypt-venv/bin/activate
-pip install rich pyAesCrypt
+pip install rich
 deactivate
 ```
 
@@ -72,7 +69,7 @@ deactivate
 ```powershell
 python -m venv $HOME\nxrsecrypt-venv
 $HOME\nxrsecrypt-venv\Scripts\Activate.ps1
-pip install rich pyAesCrypt
+pip install rich
 deactivate
 ```
 
