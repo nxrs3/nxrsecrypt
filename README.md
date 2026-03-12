@@ -54,55 +54,63 @@ For example, keep 20+ mappings with generic or misleading names. If someone gain
 git clone https://github.com/nxrs3/nxrsecrypt
 ```
 
-### 2. 🎨 Install the 'rich' python module:
+### 2. Installing dependencies: the 'rich' & 'pyAesCrypt' Python modules
 
-#### 🐧 Linux:
+#### 🐧 Linux
 
-##### using pip:
-
-```fish
-pip install rich
+```bash
+python3 -m venv ~/nxrsecrypt-venv
+source ~/nxrsecrypt-venv/bin/activate
+pip install rich pyAesCrypt
+deactivate
 ```
 
-##### using pacman:
+#### 🪟 Windows
 
-```fish
-sudo pacman -S python-rich
-```
-
-##### using apt:
-
-```fish
-apt install python3-rich
+```powershell
+python -m venv $HOME\nxrsecrypt-venv
+$HOME\nxrsecrypt-venv\Scripts\Activate.ps1
+pip install rich pyAesCrypt
+deactivate
 ```
 
 ### 3. ▶️ Create a command to easily run nxrsecrypt:
 
-#### 🐧 Linux:
+#### 🐧 Linux
 
 ##### using bash:
 
 ```bash
-echo 'nxrsecrypt() { python3 ~/nxrsecrypt/main.py; }' >> ~/.bashrc
+echo 'nxrsecrypt() { source ~/nxrsecrypt-venv/bin/activate && python3 ~/nxrsecrypt/main.py; }' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ##### using zsh:
 
 ```zsh
-echo 'nxrsecrypt() { python3 ~/nxrsecrypt/main.py; }' >> ~/.zshrc
+echo 'nxrsecrypt() { source ~/nxrsecrypt-venv/bin/activate && python3 ~/nxrsecrypt/main.py; }' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ##### using fish:
 
 ```fish
-function nxrsecrypt  
-    python3 ~/nxrsecrypt/main.py  
-end  
+function nxrsecrypt
+    source ~/nxrsecrypt-venv/bin/activate.fish
+    python3 ~/nxrsecrypt/main.py
+end
 funcsave nxrsecrypt
 ```
 
+#### 🪟 Windows (PowerShell)
+
+```
+function nxrsecrypt {
+    & $HOME\nxrsecrypt-venv\Scripts\Activate.ps1
+    python $HOME\nxrsecrypt\main.py
+}
+Set-Alias nxrsecrypt nxrsecrypt
+```
 
 ## 🛠️ Usage & commands
 
@@ -110,10 +118,6 @@ funcsave nxrsecrypt
 ```
 nxrsecrypt
 ```
-Running if you did not do step 3 of the installation:
-```
-python3 ~/nxrsecrypt/main.py
-``` 
 
 ### 🛠️ nxrseCrypt commands
 
