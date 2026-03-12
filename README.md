@@ -7,6 +7,8 @@
 
 ## 📋 Overview
 
+**currently working on implementing encryption for mappings folder**
+
 **This software is still in Beta! And is not intended for use yet**
 
 `nxrseCrypt` is a lightweight CLI text encryption/decryption tool, coded in python3.  
