@@ -216,7 +216,7 @@ def set_config(args):
     config_mgmt.replace_value(config_location, arg1, arg2)
 
 def reset(args):
-    reset_confirmation = input("   are you sure? (y/n):")
+    reset_confirmation = input("   are you sure? (y/n): ")
     if reset_confirmation == "y":
         new_user_path = os.path.join(data_location, "new_user")
         with open(new_user_path, "w") as f:
@@ -256,3 +256,21 @@ def update(args):
         print("   " + line)
     for line in result.stderr.splitlines():
         print("   " + line)
+
+def reinstall(args):
+    reset_confirmation = input("   are you sure? (y/n): ")
+    if reset_confirmation == "y":
+        cli_system.info("deleting nxrsecrypt directory")
+        shutil.rmtree(location)
+        result = subprocess.run(
+            ["git", "clone", "https://github.com/nxrs3/nxrsecrypt"],
+            cwd=home,
+            capture_output=True,
+            text=True
+        )
+        for line in result.stdout.splitlines():
+            print("   " + line)
+        for line in result.stderr.splitlines():
+            print("   " + line)
+    else:
+        cli_system.info("reinstall aborted")

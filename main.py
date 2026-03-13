@@ -44,6 +44,7 @@ commands = {
     "set-config": command_functions.set_config,
     "reset": command_functions.reset,
     "update": command_functions.update,
+    "reinstall": command_functions.reinstall
 }
 
 # -----------------------------
