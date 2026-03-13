@@ -272,5 +272,7 @@ def reinstall(args):
             print("   " + line)
         for line in result.stderr.splitlines():
             print("   " + line)
+        cli_system.info("restarting")
+        cli_system.reload(main_py_location)
     else:
         cli_system.info("reinstall aborted")
