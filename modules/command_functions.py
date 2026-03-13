@@ -29,7 +29,6 @@ def show_info(args):
     print()
     print("   version:", version)
     print("   license:", License)
-    print("   contact me at:", "nxrs3@proton.me")
     print("   description:", description)
 
 def list_em(args):
