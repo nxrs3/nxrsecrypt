@@ -3,7 +3,6 @@ from .config import *
 import os
 import subprocess
 from rich import print
-from rich.prompt import Prompt
 from typing import Optional, Tuple
 
 def clear_history(text: str):
@@ -54,7 +53,8 @@ def prompt(prompt: str, splitter: str) -> Tuple[Optional[str], ...]:
         ('arg1', 'arg2', None, None, None, None, None, None)
     """
     MAX_ARGS = 8
-    raw_args = Prompt.ask(f"[{command_prompt_color}]  {prompt} > [/{command_prompt_color}]").split(splitter)
+    print(f"[{command_prompt_color}]  {prompt} > [/{command_prompt_color}]", end="")
+    raw_args = input().split(splitter)
     args = [(arg if arg != "" else None) for arg in raw_args][:MAX_ARGS]
     args += [None] * (MAX_ARGS - len(args))
     return tuple(args)
