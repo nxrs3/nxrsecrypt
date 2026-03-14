@@ -54,7 +54,7 @@ For example, keep 20+ mappings with generic or misleading names. If someone gain
 git clone https://github.com/nxrs3/nxrsecrypt
 ```
 
-### 2. Installing dependencies: the 'rich' Python modules
+### 2. Installing dependencies: the 'rich' Python module
 
 #### 🐧 Linux
 
