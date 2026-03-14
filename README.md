@@ -19,7 +19,7 @@ While it was originally built for private communication, it is not intended for 
 
 **I welcome criticism, and forks. if this inspires anyone to build an improved open-source version, i would love to see that.**
 
-Only tested on Linux, \
+Only tested on Linux, and Android (termux)\
 Let me know if it's compatible with windows and/or macos
 
 ## ✨ Features
